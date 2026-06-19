@@ -6,11 +6,11 @@ def popular_dados():
         return
 
     colecionadores = [
-        Colecionador(apelido="NeymarFan", cidade="Santos"),
+        Colecionador(apelido="MemphisFan", cidade="São Paulo"),
         Colecionador(apelido="CopaMaster", cidade="Recife"),
     ]
     figurinhas = [
-        Figurinha(numero=10, nome_jogador="Neymar Jr", time="Brasil"),
+        Figurinha(numero=10, nome_jogador="Memphis Depay", time="Paises Baixos"),
         Figurinha(numero=25, nome_jogador="Messi", time="Argentina"),
         Figurinha(numero=7, nome_jogador="Mbappé", time="França"),
     ]

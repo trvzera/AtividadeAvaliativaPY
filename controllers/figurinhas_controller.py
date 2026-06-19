@@ -9,6 +9,7 @@ figurinhas_bp = Blueprint("figurinhas", __name__, url_prefix="/figurinhas")
 @figurinhas_bp.route("/")
 def index():
     # TODO ALUNO: ofertas = OfertaTroca.listar_com_colecionador()
+    ofertas = OfertaTroca.listar_com_colecionador()
     return render_template("figurinhas/lista_ofertas.html", ofertas=[])
 
 
@@ -16,9 +17,9 @@ def index():
 def cadastrar_oferta():
     colecionadores = Colecionador.listar()
     figurinhas = Figurinha.listar()
-
     if request.method == "POST":
         # TODO ALUNO: criar OfertaTroca + ItemOferta (oferece/deseja)
+        
         pass
 
     return render_template(

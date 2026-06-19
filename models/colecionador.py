@@ -1,13 +1,15 @@
 from . import db
 from .base import ModeloBase
 
-
 class Colecionador(ModeloBase):
     __tablename__ = "colecionadores"
 
     apelido = db.Column(db.String(60), nullable=False)
     cidade = db.Column(db.String(80), nullable=False)
     # TODO ALUNO: relationship ofertas
+    ofertas = db.relationship(
+        "Colecionador", back_populates="oferta"
+    )
 
     @classmethod
     def listar(cls):

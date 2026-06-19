@@ -1,7 +1,6 @@
 from . import db
 from .base import ModeloBase
 
-
 class Figurinha(ModeloBase):
     __tablename__ = "figurinhas"
 
