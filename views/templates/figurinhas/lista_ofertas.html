@@ -5,7 +5,7 @@
 <h1>Ofertas de troca — Copa do Mundo</h1>
 <p><a class="btn" href="{{ url_for('figurinhas.cadastrar_oferta') }}">+ Nova oferta</a></p>
 
-{# TODO ALUNO: loop ofertas #}
+{% for oferta in ofertas %}
 <table>
     <thead>
         <tr>
@@ -17,12 +17,12 @@
     </thead>
     <tbody>
         <tr>
-            <!-- TODO: oferta.colecionador.apelido, cidade, observacao, data_criacao -->
-            <td>___________</td>
-            <td>___________</td>
-            <td>___________</td>
-            <td>___________</td>
+            <td>{{ oferta.colecionador.apelido }}</td>
+            <td>{{ oferta.colecionador.cidade }}</td>
+            <td>{{ oferta.observacao }}</td>
+            <td>{{ oferta.data_criacao }}</td>
         </tr>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+{% endfor %}
 {% endblock %}

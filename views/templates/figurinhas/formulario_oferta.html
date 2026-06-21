@@ -7,9 +7,11 @@
 <form method="POST" action="{{ url_for('figurinhas.cadastrar_oferta') }}">
     <div class="form-grupo">
         <label>Colecionador</label>
-        <!-- TODO ALUNO: select colecionadores, name="colecionador_id" -->
         <select name="colecionador_id" required>
             <option value="">Quem está oferecendo?</option>
+            {% for colecionador in colecionadores %}
+                <option value="{{ colecionador.id }}">{{ colecionador.apelido }}</option>
+            {% endfor %}
         </select>
     </div>
     <div class="form-grupo">

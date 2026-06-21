@@ -8,7 +8,7 @@ class Colecionador(ModeloBase):
     cidade = db.Column(db.String(80), nullable=False)
     # TODO ALUNO: relationship ofertas
     ofertas = db.relationship(
-        "Colecionador", back_populates="oferta"
+        "OfertaTroca", back_populates="colecionador"
     )
 
     @classmethod

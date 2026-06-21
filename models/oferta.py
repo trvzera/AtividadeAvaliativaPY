@@ -26,15 +26,15 @@ class ItemOferta(ModeloBase):
     __tablename__ = "itens_oferta"
 
     # TODO ALUNO: FK oferta_id, FK figurinha_id 
-    oferta_id = db.Column(db.Integer, db.ForeignKey("oferta.id"), nullable=False, primary_key=True) 
+    oferta_id = db.Column(db.Integer, db.ForeignKey("ofertas_troca.id"), nullable=False, primary_key=True) 
     figurinha_id = db.Column(db.Integer, db.ForeignKey("figurinha.id"), nullable=False)
     tipo = db.Column(db.String(20), nullable=False)  # "oferece" ou "deseja"
     quantidade = db.Column(db.Integer, nullable=False, default=1)
 
     # TODO ALUNO: relationship oferta, figurinha
     oferta = db.relationship(
-        "ItemOferta", back_populates="oferta"
+        "OfertaTroca", back_populates="itens"
     )
     figurinha = db.relationship(
-        "ItemOferta", back_populates="figurinha"
+        "Figurinha", back_populates="itens"
     )
