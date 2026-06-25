@@ -2,6 +2,7 @@ from flask import Blueprint, redirect, render_template, request, url_for
 
 from models import Colecionador, Figurinha, ItemOferta, OfertaTroca, db
 
+
 # Apelido "figurinhas" → use url_for('figurinhas.index') nos templates
 figurinhas_bp = Blueprint("figurinhas", __name__, url_prefix="/figurinhas")
 

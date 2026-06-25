@@ -18,12 +18,18 @@
         <label>Figurinha que OFERECE</label>
         <select name="figurinha_oferece_id" required>
             <option value="">Número / jogador...</option>
+            {% for figurinha in figurinhas %}
+                <option value="{{ figurinha.id }}">{{ figurinha.numero }} - {{ figurinha.nome_jogador }}</option>
+            {% endfor %}
         </select>
     </div>
     <div class="form-grupo">
         <label>Figurinha que DESEJA</label>
         <select name="figurinha_deseja_id" required>
             <option value="">Número / jogador...</option>
+            {% for figurinha in figurinhas %}
+                <option value="{{ figurinha.id }}">{{ figurinha.numero }} - {{ figurinha.nome_jogador }}</option>
+            {% endfor %}
         </select>
     </div>
     <div class="form-grupo">
